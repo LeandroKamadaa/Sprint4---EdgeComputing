@@ -46,4 +46,4 @@ No sistema hospitalar real:
    - A outra ponta do **resistor de 10kΩ** vai para o **GND**.
 
 
-<img src="Sprint4---EdgeComputing\Diagrama Edge.png">
+<img src="Diagrama Edge.png">
