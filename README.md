@@ -2,6 +2,14 @@
 
 Este projeto utiliza um **ESP32** para ler os valores de temperatura e umidade de um sensor **DHT22** quando a luminosidade atinge um certo valor. Os dados são enviados para um **broker MQTT público** a cada 5 segundos, formatados em JSON.
 
+## Integrantes
+
+- Cilas Pinto Macedo - RM560745
+- Ian Junji Maluvayshi Matsushita RM560588
+- Pedro Arão Baquini - RM559580
+- Leandro Kamada Pesce Dimov - RM560381
+- Leonardo de Souza Pierangelli - RM560501
+
 ## Motivação
 
 Este projeto no Wokwi simula o fluxo de coleta, processamento e envio de dados que será utilizado no projeto real.  
