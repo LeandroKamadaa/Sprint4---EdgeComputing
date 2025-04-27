@@ -1,6 +1,16 @@
 # Projeto de Monitoramento de Temperatura e Umidade com MQTT - ESP32
 
-Este projeto utiliza um **ESP32** para ler os valores de temperatura e umidade de um sensor **DHT22**, além de monitorar a luminosidade com um **LDR** (Fotoresistor). Os dados são enviados para um **broker MQTT público** a cada 5 segundos, formatados em JSON. O código foi desenvolvido para facilitar a integração com sistemas IoT que requerem monitoramento remoto e automação.
+Este projeto utiliza um **ESP32** para ler os valores de temperatura e umidade de um sensor **DHT22** quando a luminosidade atinge um certo valor. Os dados são enviados para um **broker MQTT público** a cada 5 segundos, formatados em JSON.
+
+## Motivação
+
+Este projeto no Wokwi simula o fluxo de coleta, processamento e envio de dados que será utilizado no projeto real.  
+No sistema hospitalar real:
+
+- Uma **câmera** será utilizada para capturar imagens de medicamentos.
+- As imagens serão enviadas para a **nuvem**.
+- Um **script Python** processará essas imagens, extraindo informações e gerando um **JSON estruturado**.
+- O JSON será integrado ao **ERP** do hospital, automatizando o controle de medicamentos.
 
 ## Componentes Utilizados
 
@@ -34,3 +44,6 @@ Este projeto utiliza um **ESP32** para ler os valores de temperatura e umidade d
      - Uma ponta do **resistor de 10kΩ**.
      - Um fio indo para o **GPIO34**.
    - A outra ponta do **resistor de 10kΩ** vai para o **GND**.
+
+
+<img src="Sprint4---EdgeComputing\Diagrama Edge.png">
