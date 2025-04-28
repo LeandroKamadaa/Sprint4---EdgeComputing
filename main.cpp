@@ -9,11 +9,15 @@ const char* password = "";
 
 
 const char* mqtt_server = "test.mosquitto.org";
+const int mqtt_port = 1883;
 const char* mqtt_topic = "leonardo/1espb/dados";
 
 
 #define DHT_PIN 15
 #define LDR_PIN 34 
+
+const float gama = 0.7; 
+const float rl10 = 50;   
 
 
 WiFiClient espClient;
@@ -70,14 +74,20 @@ void loop() {
   client.loop();
 
   
-  int ldrValue = analogRead(LDR_PIN);
+  int ldr = analogRead(LDR_PIN);
+  ldr = map(ldr, 4095, 0, 1024, 0);  
+
+  float tensao = ldr / 1024.0 * 5;  
+  float resistencia = 2000 * tensao / (1 - tensao / 5); 
+  float brilho = pow(rl10 * 1e3 * pow(10, gama) / resistencia, (1 / gama));  
+  Serial.print(brilho);
 
   
   TempAndHumidity data = dht.getTempAndHumidity();
 
   if (isnan(data.temperature) || isnan(data.humidity)) {
     Serial.println("Falha na leitura do sensor DHT!");
-  } else if(ldrValue < 200) {
+  } else if(brilho > 200) {
     Serial.print("Temperatura: ");
     Serial.print(data.temperature);
     Serial.print(" °C | Umidade: ");
@@ -90,7 +100,7 @@ void loop() {
     StaticJsonDocument<128> doc;
     doc["temperatura"] = data.temperature;
     doc["umidade"] = data.humidity;
-    doc["ldr"] = ldrValue;
+
 
     char jsonBuffer[128];
     serializeJson(doc, jsonBuffer);
