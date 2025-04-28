@@ -16,7 +16,7 @@ const char* mqtt_topic = "leonardo/1espb/dados";
 #define DHT_PIN 15
 #define LDR_PIN 34 
 
-const float gama = 0.7; 
+const float gama = 0.7;  
 const float rl10 = 50;   
 
 
@@ -79,8 +79,8 @@ void loop() {
 
   float tensao = ldr / 1024.0 * 5;  
   float resistencia = 2000 * tensao / (1 - tensao / 5); 
-  float brilho = pow(rl10 * 1e3 * pow(10, gama) / resistencia, (1 / gama));  
-  Serial.print(brilho);
+  float brilho = pow(rl10 * 1e3 * pow(10, gama) / resistencia, (1 / gama)); 
+
 
   
   TempAndHumidity data = dht.getTempAndHumidity();
