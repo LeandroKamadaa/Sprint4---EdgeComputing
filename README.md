@@ -48,9 +48,9 @@ No sistema hospitalar real:
 2. **LDR**:
    - Uma ponta do **LDR** vai para **3.3V**.
    - A outra ponta do **LDR** vai para um nó comum com:
-     - Uma ponta do **resistor de 10kΩ**.
+     - Uma um fio indo para o **GND**.
      - Um fio indo para o **GPIO34**.
-   - A outra ponta do **resistor de 10kΩ** vai para o **GND**.
+
 
 
 <img src="Diagrama.png">
