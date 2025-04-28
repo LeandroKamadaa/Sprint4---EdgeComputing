@@ -25,7 +25,6 @@ No sistema hospitalar real:
 - **ESP32 Dev Kit** (Placa principal)
 - **DHT22** (Sensor de temperatura e umidade)
 - **LDR** (Fotoresistor)
-- **Resistor de 10kΩ** (Para o divisor de tensão do LDR)
 - **Broker MQTT público** (test.mosquitto.org)
 - **ArduinoJson** (Para formatação de dados em JSON)
 
