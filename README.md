@@ -55,6 +55,6 @@ No sistema hospitalar real:
      - Uma um fio indo para o **GND**.
      - Um fio indo para o **GPIO34**.
 
-
+<img src="dashboard.png">
 
 <img src="Diagrama.png">
