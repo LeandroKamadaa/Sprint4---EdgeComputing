@@ -2,6 +2,10 @@
 
 Este projeto utiliza um **ESP32** para ler os valores de temperatura e umidade de um sensor **DHT22** quando a luminosidade atinge um certo valor. Os dados são enviados para um **broker MQTT público** a cada 5 segundos, formatados em JSON.
 
+## Video
+
+https://www.youtube.com/watch?v=z882cfO4xa4&ab_channel=Comic
+
 ## Integrantes
 
 - Cilas Pinto Macedo - RM560745
